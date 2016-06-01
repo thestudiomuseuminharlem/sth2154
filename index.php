@@ -27,15 +27,46 @@
 	$inputs = explode("/",$url);
 	
 	//Information For specific Web Page
-	$page_title = "";
+	$page_title = "Home | Studio Museum";
 	$page_keywords = "";
 	$page_description = "";
 	
 	$page_template = "home";
 	//Switch to Read URL Code
-	if(isset($inputs[2]) && "" != $inputs[2]){
-		switch($inputs[2]){
-			case "page":
+	if(isset($inputs[1]) && "" != $inputs[1]){
+		switch($inputs[1]){
+			case "calendar":
+			$page_title = "Calendar | Studio Museum";
+			break;
+			case "on":
+			$page_title = "What's On | Studio Museum";
+			break;
+			case "visit":
+			$page_title = "Visit | Studio Museum";
+			break;
+			case "education":
+			$page_title = "Education | Studio Museum";
+			break;
+			case "collections":
+			$page_title = "Collections | Studio Museum";
+			break;
+			case "support":
+			$page_title = "Join & Support Us | Studio Museum";
+			break;
+			case "search":
+			$page_title = "Search | Studio Museum";
+			break;
+			case "shop":
+			$page_title = "Shop at Studio | Studio Museum";
+			break;
+			case "magazine":
+			$page_title = "Studio Magazine | Studio Museum";
+			break;
+			case "contact":
+			$page_title = "About & Contact | Studio Museum";
+			break;
+			case "404":
+			$page_title = "Not Found | Studio Museum";
 			break;
 			default:
 				//default page not found. Also known as 404 Error.
@@ -52,7 +83,7 @@
 			SEO Meta Tags For search
 			*/
 	   	?>
-        <title><?php echo $page_description; ?></title>
+        <title><?php echo $page_title; ?></title>
         <meta name="description" content="<?php echo $page_description; ?>">
         <meta name="keywords" content="<?php echo $page_keywords; ?>">
         <meta author="Web Author">
